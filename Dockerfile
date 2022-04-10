@@ -8,9 +8,13 @@ RUN apt-get install rpm -y
 
 RUN apt-get install wine -y
 
-RUN npm install -g electron
+RUN apt-get install dpkg -y
 
-RUN npm install -g @electron-forge/cli
+RUN apt-get install fakeroot -y
+
+# RUN npm install --save-dev electron
+
+# RUN npm install --save-dev @electron-forge/cli
 
 RUN apt-get autoremove
 
